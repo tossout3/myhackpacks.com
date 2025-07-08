@@ -2,3 +2,14 @@ modules = ["web"]
 
 [nix]
 channel = "stable-24_05"
+
+[workflows]
+
+[[workflows.workflow]]
+name = "index.html"
+mode = "sequential"
+author = 41524288
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "xdg-open index.html"
